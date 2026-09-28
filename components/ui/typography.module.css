@@ -1,0 +1,24 @@
+/* Text styles from Figma. Colors are applied where the text is used. */
+
+/* h4: Barlow SemiBold, 24/36 on desktop, 20/30 on mobile (Typography variable modes) */
+.h4 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: var(--h4-size);
+  line-height: var(--h4-line-height);
+  color: var(--color-text-primary);
+}
+
+/* body2: Public Sans Regular 14/22 */
+.body2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* subtitle2: Public Sans SemiBold 14/22 */
+.subtitle2 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}

@@ -1,0 +1,57 @@
+/* Figma "stack": vertical, gap 24, children stretched */
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+/* Figma "stack": horizontal, gap 10, six equal "input" frames (48.33px desktop, 40.83px mobile) */
+.boxes {
+  display: flex;
+  gap: var(--spacing-1-25);
+}
+
+/* Figma "input": 53px high, grey/8%, radius 8, body2 centered */
+.box {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  border-radius: var(--radius-1);
+  background-color: var(--color-grey-8);
+}
+
+.boxEmpty {
+  color: var(--color-text-disabled);
+}
+
+.boxFilled {
+  color: var(--color-text-primary);
+  animation: reveal 240ms ease-out;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Figma "stack": horizontal, gap 8, radius 8, centered under the button */
+.back {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  gap: var(--spacing-1);
+  border-radius: var(--radius-1);
+  color: var(--color-text-primary);
+}
+
+.back:hover {
+  text-decoration: underline;
+}

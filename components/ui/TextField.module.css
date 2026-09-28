@@ -1,0 +1,72 @@
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 53px; /* textfield/md-height */
+  padding: 0 var(--spacing-1-25) 0 var(--spacing-1-5); /* textfield/filled-pr 10, textfield/filled-pl 12 */
+  border-radius: var(--radius-1); /* textfield/filled-radius */
+  background: var(--color-grey-8);
+  transition: background-color 150ms ease;
+}
+
+.field:hover,
+.field:focus-within {
+  background: var(--color-action-selected); /* grey/16% */
+}
+
+.fieldError {
+  background: rgba(255, 54, 50, 0.08); /* error/main at 8% */
+}
+
+.label {
+  /* components/input/label: 12/12 SemiBold, vertically centered in an 18px row */
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: text;
+}
+
+.input {
+  /* components/input/text: 15/22 Regular */
+  display: block;
+  width: 100%;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--color-text-primary);
+  outline: none; /* focus is shown on the whole field via :focus-within */
+}
+
+.fieldWithAdornment .input {
+  padding-right: var(--spacing-5); /* keep typed text clear of the 40px end adornment */
+}
+
+.input::placeholder {
+  color: var(--color-text-disabled);
+  opacity: 1;
+}
+
+.endAdornment {
+  position: absolute;
+  top: 7px; /* Figma: end adornment 40x40 at (300, 7) inside the 340x53 field */
+  right: 0;
+  display: flex;
+}
+
+.helper {
+  /* FormHelperText: caption 12/18, padding 8px 12px 0, icon 16px, gap 4px */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-0-5);
+  padding: var(--spacing-1) var(--spacing-1-5) 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-error);
+}

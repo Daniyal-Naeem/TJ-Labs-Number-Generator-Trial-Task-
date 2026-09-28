@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  /* Mobile frame: card starts 24px below the 64px header, 16px side padding, 120px bottom padding */
+  padding: calc(var(--header-height) + var(--spacing-3)) var(--container-padding-x) var(--spacing-15);
+}
+
+.card {
+  width: 100%;
+  max-width: var(--card-max-width);
+  padding: var(--card-padding-y) var(--card-padding-x);
+  background: var(--color-background);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 600px) {
+  .main {
+    /* Desktop frame: the card is centered in the full viewport (the header floats above it).
+       Symmetric padding keeps the exact centering while preventing overlap on short viewports. */
+    justify-content: center;
+    padding: var(--header-height) var(--container-padding-x);
+  }
+}

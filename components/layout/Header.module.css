@@ -1,0 +1,37 @@
+.header {
+  position: absolute; /* Figma: the header is absolutely positioned over the page background */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 var(--header-padding-x);
+}
+
+/*
+ * Dotted separator line under the top bar (see README, "Open points"):
+ * 1px, dash 2 / gap 3, color components/divider — the values of the dashed Divider component.
+ */
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-divider) 0 2px,
+    transparent 2px 5px
+  );
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-1);
+  margin-left: auto;
+}

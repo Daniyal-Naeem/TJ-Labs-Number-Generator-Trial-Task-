@@ -1,0 +1,24 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 40px; /* icon button/md-size */
+  height: 40px;
+  padding: var(--spacing-1); /* icon button/[medium]--p */
+  border-radius: var(--radius-pill);
+  color: var(--color-action-active);
+  transition: background-color 150ms ease;
+}
+
+.inherit {
+  color: var(--color-text-primary);
+}
+
+.button:hover {
+  background-color: var(--color-action-hover);
+}
+
+.button:active {
+  background-color: var(--color-action-selected);
+}

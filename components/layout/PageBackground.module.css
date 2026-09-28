@@ -1,0 +1,20 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden; /* the Figma frame clips the blurred edges */
+  background: var(--color-background);
+}
+
+.image {
+  object-fit: cover; /* Figma image scale mode: FILL */
+  /* Figma layer blur 40 corresponds to a CSS blur radius of 20px (Figma stores the diameter). */
+  filter: blur(20px);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--color-background);
+  opacity: 0.9;
+}

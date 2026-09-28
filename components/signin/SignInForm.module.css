@@ -1,0 +1,16 @@
+/* Figma "stack": vertical, gap 24, children stretched */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+/* Figma: body2 in text/primary, right-aligned. Only the text itself is clickable. */
+.generateLink {
+  align-self: flex-end;
+  color: var(--color-text-primary);
+}
+
+.generateLink:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1); /* button/spacing */
+  width: 100%;
+  min-width: 64px; /* button/min-width */
+  height: 48px; /* button/lg-height */
+  padding: 0 var(--spacing-2); /* button/lg-px */
+  border-radius: var(--radius-1); /* button/radius */
+  background: var(--color-primary-main);
+  color: var(--color-primary-contrast);
+  /* components/button/large */
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 26px;
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+
+.button:hover {
+  box-shadow: var(--shadow-button-hover);
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}

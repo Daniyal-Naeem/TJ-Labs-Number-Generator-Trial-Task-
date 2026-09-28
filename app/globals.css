@@ -1,0 +1,129 @@
+/*
+ * Design tokens taken 1:1 from the Figma file (variable names kept where they exist).
+ * Mobile values are the defaults; the desktop values switch on at --breakpoint-desktop.
+ */
+:root {
+  /* Theme colors (Light mode) */
+  --color-text-primary: #1c252e; /* text/primary  = grey/800 */
+  --color-text-secondary: #637381; /* text/secondary = grey/600 */
+  --color-text-disabled: #919eab; /* text/disabled = grey/500 */
+  --color-primary-main: #000000; /* primary/main */
+  --color-primary-contrast: #ffffff; /* primary/contrast-text */
+  --color-background: #ffffff; /* background/default */
+  --color-action-active: #637381; /* action/active */
+  --color-action-hover: rgba(145, 158, 171, 0.08); /* action/hover = grey/8% */
+  --color-action-selected: rgba(145, 158, 171, 0.16); /* action/selected = grey/16% */
+  --color-action-focus: rgba(145, 158, 171, 0.24); /* action/focus = grey/24% */
+  --color-grey-8: rgba(145, 158, 171, 0.08); /* grey/8% (filled input background) */
+  --color-divider: rgba(145, 158, 171, 0.2); /* components/divider = grey/20% */
+  --color-error: #ff3632; /* error/main */
+
+  /* Effects */
+  --shadow-card: 0 24px 48px 0 rgba(145, 158, 171, 0.16); /* shadow/16% */
+  --shadow-button-hover: 0 8px 16px 0 rgba(0, 0, 0, 0.24);
+
+  /* Radius */
+  --radius-1: 8px; /* radius-1, button/radius, textfield/filled-radius */
+  --radius-card: 16px; /* card/radius */
+  --radius-pill: 500px; /* icon button/radius */
+
+  /* Spacing */
+  --spacing-0-5: 4px;
+  --spacing-1: 8px;
+  --spacing-1-25: 10px;
+  --spacing-1-5: 12px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 40px;
+  --spacing-15: 120px;
+
+  /* Typography: fonts are provided by next/font via --font-public-sans / --font-barlow */
+  --font-primary: var(--font-public-sans), "Public Sans", system-ui, sans-serif; /* family/primary */
+  --font-secondary: var(--font-barlow), "Barlow", var(--font-primary); /* family/secondary */
+
+  --h4-size: 20px; /* h4/size (Mobile) */
+  --h4-line-height: 30px; /* h4/line-height (Mobile) */
+
+  /* Layout */
+  --header-height: 64px; /* header-mobile-height */
+  --header-padding-x: var(--spacing-2); /* Header mobile padding */
+  --card-padding-y: var(--spacing-5);
+  --card-padding-x: var(--spacing-3); /* card mobile: 40px 24px */
+  --card-max-width: 420px;
+  --container-padding-x: var(--spacing-2); /* container-mobile-px */
+}
+
+/* Desktop frame (1440 wide in Figma). 600px keeps phones on the mobile design. */
+@media (min-width: 600px) {
+  :root {
+    --h4-size: 24px; /* h4/size (Desktop) */
+    --h4-line-height: 36px; /* h4/line-height (Desktop) */
+    --header-height: 72px; /* header-desktop-height */
+    --header-padding-x: var(--spacing-3);
+    --card-padding-x: var(--spacing-5); /* card desktop: 40px all around */
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

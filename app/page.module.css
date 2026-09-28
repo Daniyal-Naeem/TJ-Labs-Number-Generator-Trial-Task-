@@ -1,0 +1,28 @@
+/* Figma "stack": vertical, gap 12, padding-bottom 32, items centered */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-1-5);
+  padding-bottom: var(--spacing-4);
+  text-align: center;
+}
+
+/* Figma "stack": horizontal, gap 4 */
+.subline {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-0-5);
+}
+
+.sublineText {
+  color: var(--color-text-secondary);
+}
+
+.sublineLink {
+  color: var(--color-primary-main);
+}
+
+.sublineLink:hover {
+  text-decoration: underline;
+}
