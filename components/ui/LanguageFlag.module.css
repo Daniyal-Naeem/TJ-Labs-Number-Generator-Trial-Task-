@@ -1,0 +1,34 @@
+/* Same box as the IconButton (40x40, padding 8), but static */
+.frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  padding: var(--spacing-1);
+  border-radius: var(--radius-pill);
+}
+
+/* Figma: the 24x24 icon slot clips the flag image, anchored top-left */
+.clip {
+  display: block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.framedImage {
+  display: block;
+  width: 27.65px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.plainImage {
+  display: block;
+  flex: none;
+  width: var(--flag-width); /* 34px desktop, 32px mobile */
+  height: 20px;
+  object-fit: cover;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AuthPage } from "@/components/layout/AuthPage";
 import { SignInForm } from "@/components/signin/SignInForm";
+import { LanguageFlag } from "@/components/ui/LanguageFlag";
 import typography from "@/components/ui/typography.module.css";
 import styles from "./page.module.css";
 
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 /** Figma frames "SignIn_Centered" (1440x1024) and "[MOBILE] SignIn_Centered" (375x800). */
 export default function SignInPage() {
   return (
-    <AuthPage lang="en">
+    <AuthPage lang="en" headerActions={<LanguageFlag lang="en" framed />}>
       <div className={styles.intro}>
         <h1 className={typography.h4}>Sign in</h1>
         <p className={styles.subline}>

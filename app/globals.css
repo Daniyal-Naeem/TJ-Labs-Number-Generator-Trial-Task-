@@ -52,6 +52,7 @@
   --card-padding-x: var(--spacing-3); /* card mobile: 40px 24px */
   --card-max-width: 420px;
   --container-padding-x: var(--spacing-2); /* container-mobile-px */
+  --flag-width: 32px; /* generator flag: 32x20 mobile */
 }
 
 /* Desktop frame (1440 wide in Figma). 600px keeps phones on the mobile design. */
@@ -62,6 +63,7 @@
     --header-height: 72px; /* header-desktop-height */
     --header-padding-x: var(--spacing-3);
     --card-padding-x: var(--spacing-5); /* card desktop: 40px all around */
+    --flag-width: 34px; /* generator flag: 34x20 desktop */
   }
 }
 
