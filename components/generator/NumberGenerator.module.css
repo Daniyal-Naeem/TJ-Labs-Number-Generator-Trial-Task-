@@ -5,10 +5,18 @@
   gap: var(--spacing-3);
 }
 
-/* Figma "stack": horizontal, gap 10, six equal "input" frames (48.33px desktop, 40.83px mobile) */
+/*
+ * Digit boxes: mobile uses 8px gap (tighter frame), desktop uses Figma spacing-1.25 (10px).
+ */
 .boxes {
   display: flex;
-  gap: var(--spacing-1-25);
+  gap: var(--spacing-1); /* 8px — mobile */
+}
+
+@media (min-width: 600px) {
+  .boxes {
+    gap: var(--spacing-1-25); /* 10px — desktop */
+  }
 }
 
 /* Figma "input": 53px high, grey/8%, radius 8, body2 centered */
