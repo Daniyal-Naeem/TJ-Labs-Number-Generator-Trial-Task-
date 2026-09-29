@@ -16,7 +16,7 @@ components/layout/ — background, header, centered card shell
 components/ui/ — Button, TextField, IconButton, icons, flag
 components/signin/ + components/generator/ — each screen’s form/logic UI
 lib/ — pure generateUniqueDigits + tests
-public/images/ background photo + EN/DE flags
+public/images/ background photo (flags are inline SVGs)
 
 
 Design implementation:
