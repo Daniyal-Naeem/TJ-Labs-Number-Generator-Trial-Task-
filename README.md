@@ -48,7 +48,7 @@ Tests: npm test
 Use of AI:
 
 Started and created the project using AI cursor to save time
-Given instruction/ prompts to created loginauth screens and for another screen for number generator
+Given instruction/ prompts to create login/auth screens and for another screen for number generator
 Implimented logic using AI to generate numbers
 
 
