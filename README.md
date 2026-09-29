@@ -1,4 +1,6 @@
 TJ Labs Number Generator (Trial Task)
+Live link to the App: https://tj-labs-number-generator-one.vercel.app/
+
 
 Setup:
 
@@ -59,7 +61,6 @@ Added a dotted line under the header because the brief mentioned it, not clearly
 Settings icon is visual only, no settings screen in the task
 On mobile generator, settings is hidden (matches Figma)
 Used Figma error helper style for validation messages
-
 
 
 Open points:

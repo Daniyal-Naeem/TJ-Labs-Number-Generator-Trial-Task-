@@ -13,19 +13,13 @@
   background-color: var(--color-action-hover);
 }
 
-/*
- * Soft rectangular flag chip — matches Figma's clipped flag icon,
- * with a light ring so it doesn’t look like a raw bitmap in the corner.
- */
+/* Clipped flag icon inside the icon-button slot (no ring/shadow — not in Figma) */
 .flagChip {
   display: block;
   width: 28px;
   height: 20px;
   overflow: hidden;
   border-radius: 4px;
-  box-shadow:
-    0 0 0 1px rgba(145, 158, 171, 0.28),
-    0 1px 2px rgba(28, 37, 46, 0.06);
 }
 
 .plain {
@@ -35,9 +29,6 @@
   height: 20px;
   overflow: hidden;
   border-radius: 4px;
-  box-shadow:
-    0 0 0 1px rgba(145, 158, 171, 0.28),
-    0 1px 2px rgba(28, 37, 46, 0.06);
 }
 
 .flagSvg {
